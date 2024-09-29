@@ -1,139 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Website!</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <style>
-            /* General styles for consistent alignment */
-            p {
-                margin: 0; /* Remove extra margin */
-            }
-            .social-icons {
-                font-size: 30px; /* Size of the icon */
-                margin: 10px 0; /* Space between icons */
-                display: flex; /* Flexbox for alignment */
-                justify-content: left; /* Left align the icons */
-                align-items: center; /* Align items vertically */
-            }
-            .social-icons a {
-                text-decoration: none;
-                color: #0e76a8;
-                margin-right: 10px; /* Space between icons */
-            }
-            .social-icons a:hover {
-                color: #0077b5;
-            }
-            .email-icon {
-                color: #333;
-            }
-            .email-icon:hover {
-                color: #555;
-            }
-
-            /* Fix Read More link alignment and styling */
-            #readMoreBtn {
-                display: inline-block;
-                margin-top: 10px;
-                font-family: arial;
-                color: steelblue; /* Use steelblue color */
-                text-decoration: none; /* Remove underline */
-            }
-            #readMoreBtn:hover {
-                text-decoration: underline; /* Add underline on hover */
-            }
-
-            /* Style for read more section */
-            #more { 
-                display: none; 
-            }
-
-            /* Ensure alignment of links in the LINKS section */
-            .link-block {
-                font-family: arial;
-                color: steelblue;
-                font-size: 20px;
-                text-align: left;
-                margin-top: 20px; /* Space between text blocks */
-            }
-            .link-block a {
-                display: block; /* Make each link take its own line */
-                margin-bottom: 5px; /* Add space between links */
-                color: steelblue; /* Use steelblue color */
-                text-decoration: none; /* Remove underline */
-            }
-            .link-block a:hover {
-                text-decoration: underline; /* Underline on hover */
-            }
-        </style>
-        
-    </head>
-    <body>
-        <!-- SELFIE -->
-        <div>
-            <p>
-                <img src="./images/profile_pic.png" alt="Example Image">
-            </p>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General styles for consistent alignment */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        p {
+            margin: 0;
+        }
+        .social-icons {
+            font-size: 30px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .social-icons a {
+            color: #0e76a8;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #0077b5;
+        }
+        /* "Read More" link styles */
+        #readMoreBtn {
+            display: inline-block;
+            margin-top: 10px;
+            color: steelblue;
+            text-decoration: none;
+        }
+        #readMoreBtn:hover {
+            text-decoration: underline;
+        }
+        #more {
+            display: none;
+        }
+        /* Styles for link block */
+        .link-block {
+            font-size: 20px;
+            color: steelblue;
+            margin-top: 20px;
+        }
+        .link-block a {
+            display: inline-block;
+            margin-bottom: 5px;
+            color: steelblue;
+            text-decoration: none;
+        }
+        .link-block a:hover {
+            text-decoration: underline;
+        }
+        /* New style to limit the width of the paragraph */
+        .limited-width {
+            max-width: 600px; /* Adjust this value as needed */
+            text-align: left; /* Ensure left alignment */
+        }
+    </style>
+</head>
+<body>
+    <!-- SELFIE -->
+    <div>
+        <img src="./images/profile_pic.png" alt="Profile Picture">
+    </div>
+    <br>
+    <!-- GREETING -->
+    <div>
+        <p class="limited-width">Howdy! Thank you for visiting my website.</p>
         <br>
-        <!-- GREETING -->
-        <div>
-            <p style="font-family:arial; color:black; font-size:16px; text-align:left;">
-                Howdy! Thank you for visiting my website.
-                <br><br>
-                The goal of this site is to document my I.T. journey and share resources.
-                <br><br>
-                I welcome invitations to connect with fellow professionals, like-minded individuals, and those interested in exploring opportunities for collaboration or networking.
-                <br><br>
-                Feel free to reach out. I look forward to connecting with you!
-                <span id="dots">...</span><span id="more">
-                <br><br>
-                This is my read more section.
-                <br><br>
-                This section continues my read more about me section.
-                </span>
-            </p>
-            <!-- Align Read More button -->
-            <a href="javascript:void(0);" onclick="toggleReadMore()" id="readMoreBtn">
-               Read More
-            </a>
-        </div>
+        <p class="limited-width">The goal of this site is to document my I.T. journey and share resources.</p>
         <br>
-        <!-- SOCIAL ICONS -->
-        <div class="social-icons" style="display: flex; align-items: center; margin-top: 10px;">
-            <a href="https://www.linkedin.com/in/moisesgodinez" target="_blank" title="LinkedIn">
-                <i class="fab fa-linkedin" style="font-size: 30px; color: #0e76a8;"></i>
-            </a>
-        </div>
-    
-        <!-- LINKS -->
-        <div class="link-block">
-            <a href="posts.html">Posts</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="techblogs.html">Tech Blogs</a>
-            <a href="techpodcasts.html">Tech Podcasts</a>
-            <a href="techytchannels.html">Tech YouTube Channels</a>
-            <a href="othertechtools.html">Other Tech Tools</a>
-            <a href="veteranrsrcs.html">Veteran Resources</a>
-        </div>
-    
-        <script>
-            function toggleReadMore() {
-                var dots = document.getElementById("dots");
-                var moreText = document.getElementById("more");
-                var btnText = document.getElementById("readMoreBtn");
-    
-                if (dots.style.display === "none") {
-                    dots.style.display = "inline";
-                    btnText.innerHTML = "Read More"; 
-                    moreText.style.display = "none";
-                } else {
-                    dots.style.display = "none";
-                    btnText.innerHTML = "Read Less"; 
-                    moreText.style.display = "inline";
-                }
+        <p class="limited-width">I welcome invitations to connect with fellow professionals, like-minded individuals, and those interested in exploring opportunities for collaboration or networking.</p>
+        <br>
+        <p class="limited-width">Feel free to reach out. I look forward to connecting with you!</p>
+        <p class="limited-width">
+            <span id="dots">...</span><span id="more">
+                <br>This is my read more section.
+                <br>
+                <br>This section continues my read more about me section.
+            </span>
+        </p>
+        <a href="javascript:void(0);" onclick="toggleReadMore()" id="readMoreBtn">Read More</a>
+    </div>
+    <br>
+    <!-- SOCIAL ICONS -->
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/moisesgodinez" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+    <!-- LINKS -->
+    <div class="link-block">
+        <a href="posts.html">Posts</a>
+        <br>
+        <a href="portfolio.html">Portfolio</a>
+        <br>
+        <a href="techblogs.html">Tech Blogs</a>
+        <br>
+        <a href="techpodcasts.html">Tech Podcasts</a>
+        <br>
+        <a href="techytchannels.html">Tech YouTube Channels</a>
+        <br>
+        <a href="othertechtools.html">Other Tech Tools</a>
+        <br>
+        <a href="veteranrsrcs.html">Veteran Resources</a>
+    </div>
+
+    <script>
+        function toggleReadMore() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("readMoreBtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.textContent = "Read More";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.textContent = "Read Less";
+                moreText.style.display = "inline";
             }
-        </script>
-    </body>
+        }
+    </script>
+</body>
 </html>
