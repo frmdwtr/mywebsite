@@ -31,21 +31,24 @@
             .email-icon:hover {
                 color: #555;
             }
-        
-            /* Fix Read More link alignment */
+
+            /* Fix Read More link alignment and styling */
             #readMoreBtn {
                 display: inline-block;
                 margin-top: 10px;
                 font-family: arial;
-                color: blue;
-                text-decoration: underline;
+                color: steelblue; /* Use steelblue color */
+                text-decoration: none; /* Remove underline */
             }
-        
+            #readMoreBtn:hover {
+                text-decoration: underline; /* Add underline on hover */
+            }
+
             /* Style for read more section */
             #more { 
                 display: none; 
             }
-        
+
             /* Ensure alignment of links in the LINKS section */
             .link-block {
                 font-family: arial;
@@ -57,6 +60,11 @@
             .link-block a {
                 display: block; /* Make each link take its own line */
                 margin-bottom: 5px; /* Add space between links */
+                color: steelblue; /* Use steelblue color */
+                text-decoration: none; /* Remove underline */
+            }
+            .link-block a:hover {
+                text-decoration: underline; /* Underline on hover */
             }
         </style>
         
@@ -87,8 +95,7 @@
                 </span>
             </p>
             <!-- Align Read More button -->
-            <a href="javascript:void(0);" onclick="toggleReadMore()" id="readMoreBtn" 
-               style="font-family:arial; color:blue; text-decoration:underline; display: inline-block; margin-top: 10px;">
+            <a href="javascript:void(0);" onclick="toggleReadMore()" id="readMoreBtn">
                Read More
             </a>
         </div>
@@ -101,16 +108,14 @@
         </div>
     
         <!-- LINKS -->
-        <div style="margin-top: 20px;">
-            <p style="font-family:arial; color:steelblue; font-size:20px; text-align:left; line-height: 1.5;">
-                <a href="posts.html" style="display: block; margin-bottom: 5px;">Posts</a>
-                <a href="portfolio.html" style="display: block; margin-bottom: 5px;">Portfolio</a>
-                <a href="techblogs.html" style="display: block; margin-bottom: 5px;">Tech Blogs</a>
-                <a href="techpodcasts.html" style="display: block; margin-bottom: 5px;">Tech Podcasts</a>
-                <a href="techytchannels.html" style="display: block; margin-bottom: 5px;">Tech YouTube Channels</a>
-                <a href="othertechtools.html" style="display: block; margin-bottom: 5px;">Other Tech Tools</a>
-                <a href="veteranrsrcs.html" style="display: block; margin-bottom: 5px;">Veteran Resources</a>
-            </p>
+        <div class="link-block">
+            <a href="posts.html">Posts</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="techblogs.html">Tech Blogs</a>
+            <a href="techpodcasts.html">Tech Podcasts</a>
+            <a href="techytchannels.html">Tech YouTube Channels</a>
+            <a href="othertechtools.html">Other Tech Tools</a>
+            <a href="veteranrsrcs.html">Veteran Resources</a>
         </div>
     
         <script>
