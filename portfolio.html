@@ -9,12 +9,76 @@
             text-decoration: none; /* Remove underline from all hyperlinks */
             color: steelblue; /* Optional: Set your desired link color */
         }
+        .link-block {
+            font-size: 20px;
+            color: steelblue;
+            margin-top: 20px;
+        }
+        .link-block a {
+            display: inline-block;
+            margin-bottom: 5px;
+            color: steelblue;
+            text-decoration: none;
+        }
+        .link-block a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+        /* New style to limit the width of the paragraph */
+        .limited-width {
+            max-width: 600px; /* Adjust this value as needed */
+            text-align: left; /* Ensure left alignment */
+        }
         </style>
     </head>
     <body>
-        <!--LINKS-->
-        <div>
-            <p style="font-family:arial; color:steelblue; font-size:20px; text-align:left">
+        <!-- FULL STACK NETWORK PROFESSIONAL-->
+        <div class="link-block">
+            <p style="font-family:arial; color:steelblue; font-size:20px; text-align:left;">
+                <a href="./portfolio/fsnp.html">NGT Academy Full Stack Network Professional Project</a>
+            </p>
+            <p class="limited-width" style="font-family:arial; color:black; font-size:16px;">
+                Deployed a robust network infrastructure with a headquarters office and two branch offices with routing, switching, VoIP, wireless and network security.
+            </p>
+        </div>
+        <!-- CISCO ASA SSL VPN -->
+        <div class="link-block">
+        <p style="font-family:arial; color:steelblue; font-size:20px; text-align:left;">
+            <a href="./portfolio/asa_ssl_vpn.html">NGT Academy Cisco ASA SSL VPN Project</a>
+        </p>
+        <p class="limited-width" style="font-family:arial; color:black; font-size:16px;">
+            Installed a Cisco ASA Firewall with SSL VPN service to provide better site-to-site VPN capabilities and telecommuter support with remote access VPN.
+        </p>
+    </div>
+        <!-- CO-LOCATION DATA CENTER -->
+        <div class="link-block">
+            <p style="font-family:arial; color:steelblue; font-size:20px; text-align:left;">
+                <a href="./portfolio/colo_dc.html">NGT Academy Co-Location Data Center Project</a>
+            </p>
+            <p class="limited-width" style="font-family:arial; color:black; font-size:16px;">
+                This project is based on a common extension of a network by adding a hot-site for disaster recovery and redundant network services. This project included the installation of two Cisco ASR 1002-HX routers two Cisco Nexus 7009 switches, and two Cisco Nexus 5648 switches in support of the company headquarters and two branch offices.
+            </p>
+        </div>
+        <!-- ADVANCED SKILLS -->
+        <div class="link-block">
+            <p style="font-family:arial; color:steelblue; font-size:20px; text-align:left;">
+                <a href="./portfolio/adv_skills.html">NGT Academy Advanced Skills Project</a>
+            </p>
+            <p class="limited-width" style="font-family:arial; color:black; font-size:16px;">
+                Upgraded the existing Full Stack Network Associate project with a router upgrade, NAT/PAT, an IOS Firewall, ACL configuration, a core switch upgrade, new VLANs, port-aggregation between switches, fiber optics for WAN connectivity, dual-router remote server network  with EIGRP and HSRP, and lastly added another remote site with BGP connectivity across the private WAN.
+            </p>
+        </div>
+        <!-- FULL STACK NETWORK ASSOCIATE -->
+        <div class="link-block">
+            <p style="font-family:arial; color:steelblue; font-size:20px; text-align:left;">
+                <a href="./portfolio/fsna.html">NGT Academy Full Stack Network Associate Project</a>
+            </p>
+            <p class="limited-width" style="font-family:arial; color:black; font-size:16px;">
+                Deployed a network with two managed switches with three VLANs, voice QoS, inter-VLAN routing for three VLANs, a default route to the Internet, VoIP phones and service via Internet-based VoIP provider, a secure management plane and network perimeter, and a corporate wireless SSID.
+            </p>
+        </div>
+        <!-- LINKS -->
+        <div class="link-block">
+            <p style="font-family:arial; color:steelblue; font-size:20px; text-align:left;">
                 <a href="index.html">Home</a>
                 <br>
                 <a href="posts.html">Posts</a>
@@ -30,12 +94,5 @@
                 <a href="veteranrsrcs.html">Veteran Resources</a>
             </p>
         </div>
-        <br>
-        <div>
-            <p style="font-family:arial; color:black; font-size:36px; text-align:left">
-                COMING SOON!
-            </p>
-        </div>
-        <!--MORE CONTENT HERE-->
     </body>
 </html>
