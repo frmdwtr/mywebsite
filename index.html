@@ -6,80 +6,129 @@
         <title>My Website!</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <style>
-        .social-icons {
-            font-size: 30px; /* Size of the icon */
-            margin: 10px;
-            display: flex; /* Use flexbox for alignment */
-            justify-content: left; /* Center align the icons */
-        }
-        a {
-            text-decoration: none;
-            color: #0e76a8; /* LinkedIn blue color */
-            margin: 0 10px; /* Space between icons */
-        }
-        a:hover {
-            color: #0077b5; /* Slightly lighter blue on hover */
-        }
-        .email-icon {
-            color: #333; /* Email icon color (default black) */
-        }
-        .email-icon:hover {
-            color: #555; /* Slightly lighter color on hover */
-        }
+            /* General styles for consistent alignment */
+            p {
+                margin: 0; /* Remove extra margin */
+            }
+            .social-icons {
+                font-size: 30px; /* Size of the icon */
+                margin: 10px 0; /* Space between icons */
+                display: flex; /* Flexbox for alignment */
+                justify-content: left; /* Left align the icons */
+                align-items: center; /* Align items vertically */
+            }
+            .social-icons a {
+                text-decoration: none;
+                color: #0e76a8;
+                margin-right: 10px; /* Space between icons */
+            }
+            .social-icons a:hover {
+                color: #0077b5;
+            }
+            .email-icon {
+                color: #333;
+            }
+            .email-icon:hover {
+                color: #555;
+            }
+        
+            /* Fix Read More link alignment */
+            #readMoreBtn {
+                display: inline-block;
+                margin-top: 10px;
+                font-family: arial;
+                color: blue;
+                text-decoration: underline;
+            }
+        
+            /* Style for read more section */
+            #more { 
+                display: none; 
+            }
+        
+            /* Ensure alignment of links in the LINKS section */
+            .link-block {
+                font-family: arial;
+                color: steelblue;
+                font-size: 20px;
+                text-align: left;
+                margin-top: 20px; /* Space between text blocks */
+            }
+            .link-block a {
+                display: block; /* Make each link take its own line */
+                margin-bottom: 5px; /* Add space between links */
+            }
         </style>
+        
     </head>
     <body>
         <!-- SELFIE -->
-         <div>
+        <div>
             <p>
                 <img src="./images/profile_pic.png" alt="Example Image">
             </p>
         </div>
+    
         <!-- GREETING -->
-         <div>
-            <p style="font-family:arial; color:black; font-size:16px; text-align:left">
+        <div>
+            <p style="font-family:arial; color:black; font-size:16px; text-align:left;">
                 Howdy! Thank you for visiting my website.
-                <br>
-                <br>
+                <br><br>
                 The goal of this site is to document my I.T. journey and share resources.
-                <br>
-                <br>
+                <br><br>
                 I welcome invitations to connect with fellow professionals, like-minded individuals, and those interested in exploring opportunities for collaboration or networking.
-                <br>
-                <br>
+                <br><br>
                 Feel free to reach out. I look forward to connecting with you!
+                <span id="dots">...</span><span id="more">
+                <br><br>
+                This is my read more section.
+                <br><br>
+                This section continues my read more about me section.
+                </span>
             </p>
+            <!-- Align Read More button -->
+            <a href="javascript:void(0);" onclick="toggleReadMore()" id="readMoreBtn" 
+               style="font-family:arial; color:blue; text-decoration:underline; display: inline-block; margin-top: 10px;">
+               Read More
+            </a>
         </div>
+        <br>
         <!-- SOCIAL ICONS -->
-         <div class="social-icons">
-            <!-- LinkedIn Icon -->
-             <a href="https://www.linkedin.com/in/moisesgodinez" target="_blank" title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <!-- Email Icon -->
-             <!--<a href="mailto:your-email@example.com" title="Email" class="email-icon">
-                <i class="fas fa-envelope"></i>-->
+        <div class="social-icons" style="display: flex; align-items: center; margin-top: 10px;">
+            <a href="https://www.linkedin.com/in/moisesgodinez" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin" style="font-size: 30px; color: #0e76a8;"></i>
             </a>
         </div>
+    
         <!-- LINKS -->
-         <div>
-            <p style="font-family:arial; color:steelblue; font-size:20px; text-align:left">
-                <a href="posts.html">Posts</a>
-                <br>
-                <a href="portfolio.html">Portfolio</a>
-                <br>
-                <a href="techblogs.html">Tech Blogs</a>
-                <br>
-                <a href="techpodcasts.html">Tech Podcasts</a>
-                <br>
-                <a href="techytchannels.html">Tech YouTube Channels</a>
-                <br>
-                <a href="othertechtools.html">Other Tech Tools</a>
-                <br>
-                <a href="veteranrsrcs.html">Veteran Resources</a>
+        <div style="margin-top: 20px;">
+            <p style="font-family:arial; color:steelblue; font-size:20px; text-align:left; line-height: 1.5;">
+                <a href="posts.html" style="display: block; margin-bottom: 5px;">Posts</a>
+                <a href="portfolio.html" style="display: block; margin-bottom: 5px;">Portfolio</a>
+                <a href="techblogs.html" style="display: block; margin-bottom: 5px;">Tech Blogs</a>
+                <a href="techpodcasts.html" style="display: block; margin-bottom: 5px;">Tech Podcasts</a>
+                <a href="techytchannels.html" style="display: block; margin-bottom: 5px;">Tech YouTube Channels</a>
+                <a href="othertechtools.html" style="display: block; margin-bottom: 5px;">Other Tech Tools</a>
+                <a href="veteranrsrcs.html" style="display: block; margin-bottom: 5px;">Veteran Resources</a>
             </p>
         </div>
+    
+        <script>
+            function toggleReadMore() {
+                var dots = document.getElementById("dots");
+                var moreText = document.getElementById("more");
+                var btnText = document.getElementById("readMoreBtn");
+    
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btnText.innerHTML = "Read More"; 
+                    moreText.style.display = "none";
+                } else {
+                    dots.style.display = "none";
+                    btnText.innerHTML = "Read Less"; 
+                    moreText.style.display = "inline";
+                }
+            }
+        </script>
     </body>
 </html>
-
-<!--<a href="https://www.credly.com/badges/6eab8ae5-4bf1-4c2d-a68f-70b89b74f566/linked_in_profile" target="_blank">CCNA</a>-->
