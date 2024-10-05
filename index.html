@@ -55,6 +55,13 @@
         .link-block a:hover {
             text-decoration: underline;
         }
+        .read-more {
+            color: steelblue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
         /* New style to limit the width of the paragraph */
         .limited-width {
             max-width: 600px; /* Adjust this value as needed */
@@ -81,7 +88,7 @@
             <span id="dots">...</span><span id="more">
                 <br>My philosophy is “aimed at the sincere and honest development of one’s potential” and my commitment to continuous learning is targeted at helping individuals, teams, and organizations achieve successful outcomes by leveraging information technology.
                 <br>
-                <br>My passion for technology has driven me to pursue opportunities to expand my technical acumen, most recently earning the <a href="https://cs.lpi.org/caf/Xamman/certification/verify/LPI000600912/d8fecvn7x5" target="_blank">Linux Essentials</a> certification from the <a href="https://lpi.org" target="_blank">Linux Professional Institute (LPI)</a>, and actively pursuing an <a href="https://pythoninstitute.org/pcep" target="_blank">Entry-Level Python Programmer</a> certification from the <a href="https://pythoninstitute.org/" target="_blank">Python Institute</a>.
+                <br>My passion for technology has driven me to pursue opportunities to expand my technical acumen, most recently earning the <a class="read-more a:hover" href="https://cs.lpi.org/caf/Xamman/certification/verify/LPI000600912/d8fecvn7x5" target="_blank" text-decoration="none">Linux Essentials</a> certification from the <a class="read-more a:hover" href="https://lpi.org" target="_blank">Linux Professional Institute (LPI)</a>, and actively pursuing an <a class="read-more a:hover" href="https://pythoninstitute.org/pcep" target="_blank">Entry-Level Python Programmer</a> certification from the <a class="read-more a:hover" href="https://pythoninstitute.org/" target="_blank">Python Institute</a>.
             </span>
         </p>
         <a href="javascript:void(0);" onclick="toggleReadMore()" id="readMoreBtn">Read More</a>
